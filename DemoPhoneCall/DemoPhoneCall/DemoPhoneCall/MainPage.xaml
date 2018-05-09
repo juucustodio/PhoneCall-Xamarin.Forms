@@ -4,8 +4,9 @@
              xmlns:local="clr-namespace:DemoPhoneCall"
              x:Class="DemoPhoneCall.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Entry x:Name="Number"  Keyboard="Telephone"/>
+        <Button Text="Call" Clicked="Call"/>
+    </StackLayout>
 
 </ContentPage>

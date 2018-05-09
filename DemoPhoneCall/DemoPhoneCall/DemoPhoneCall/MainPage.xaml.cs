@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Plugin.Messaging;
 using Xamarin.Forms;
 
 namespace DemoPhoneCall
@@ -13,5 +10,12 @@ namespace DemoPhoneCall
 		{
 			InitializeComponent();
 		}
-	}
+
+	    public void Call(object sender, EventArgs e)
+	    {
+	        var phoneDialer = CrossMessaging.Current.PhoneDialer;
+	        if (phoneDialer.CanMakePhoneCall && !String.IsNullOrWhiteSpace(Number.Text))
+	            phoneDialer.MakePhoneCall(Number.Text);
+        }
+    }
 }

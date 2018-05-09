@@ -5,7 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Xam.Plugins.Messaging" Version="5.2.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Plugin.Messaging">
+      <HintPath>..\..\..\..\..\Users\Juliano\.nuget\packages\xam.plugins.messaging\5.2.0\lib\Xamarin.iOS10\Plugin.Messaging.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
